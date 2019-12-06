@@ -40,8 +40,8 @@ steps:
     apksignerKeystoreAlias: 'androidAliasDebug'
     apksignerKeyPassword: 'android'
 
-- task: CopyFiles@2
-  inputs:
-    contents: '**/*.apk'
-    targetFolder: '$(build.artifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(outputDirectory)/*.apk'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
