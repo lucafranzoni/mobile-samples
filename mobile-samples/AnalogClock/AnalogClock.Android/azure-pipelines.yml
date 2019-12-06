@@ -37,7 +37,7 @@ steps:
     apkFiles: '$(outputDirectory)/*.apk'
     apksignerKeystoreFile: 'debug.keystore'
     apksignerKeystorePassword: 'android'
-    apksignerKeystoreAlias: 'androidebugkey'
+    apksignerKeystoreAlias: 'androiddebugkey'
     apksignerKeyPassword: 'android'
 
 - task: PublishBuildArtifacts@1
