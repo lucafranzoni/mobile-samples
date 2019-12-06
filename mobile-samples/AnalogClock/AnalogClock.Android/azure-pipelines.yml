@@ -32,6 +32,14 @@ steps:
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
 
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '$(outputDirectory)/*.apk'
+    apksignerKeystoreFile: 'debug.keystore'
+    apksignerKeystorePassword: 'android'
+    apksignerKeystoreAlias: 'androidAliasDebug'
+    apksignerKeyPassword: 'android'
+
 - task: CopyFiles@2
   inputs:
     contents: '**/*.apk'
