@@ -42,6 +42,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(outputDirectory)'
+    PathtoPublish: '$(outputDirectory)/*.apk'
     ArtifactName: 'drop'
     publishLocation: 'Container'
